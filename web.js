@@ -1,18 +1,14 @@
 var express = require('express');
-
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var contentsofindex = fs.readFileSync('index.html');
-
-var textdisplay = new Buffer();
-
-textdisplay.write(contentsofindex)
-textdisplay.toString("utf-8")
+var contentsofindex = fs.readFileSync('/index.html');
 
 app.get('/', function(request, response) {
-  response.send('textdisplay');
+  fs.readFileSync('index.html' function(err, data){
+    if (err) throw err;
+    response.send(data.toString());
 });
 
 var port = process.env.PORT || 5000;
