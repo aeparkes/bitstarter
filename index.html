@@ -23,12 +23,12 @@
 	  position: relative;
 	  float: left;
 	  }
-	  .floatclear {
-	  clear: both;
-	  }
 	  .video, .thermometer, .order, .social {
 	  border: 1px dotted;
 	  text-align: center;
+	  }
+	  .threeblocks {
+	  width: 33%;
 	  }
 	  .video {
 	  /* Internal borders have 1px width so remember to add 4 x 1 px to 120 px */
@@ -42,15 +42,17 @@
       </head>
       <body>
 	<div class="container">
-	  <div class="row navigation floatclear">
-	    <div class="span2 logo column">
+	  <div class="row navigation">
+	    <div>
+	    <div class="span2 logo column threeblocks">
 	      Logo
 	    </div>
-	    <div class="span6 blank column">
+	    <div class="span6 blank column threeblocks">
 	      Blank
 	    </div>
-	    <div class="span4 about column">
+	    <div class="span4 about column threeblocks">
 	      About
+	    </div>
 	    </div>
 	  </div>
 	  <div class="row heading">
